@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Pagos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><strong>Sistema de Pagos</strong></h1> 
+        <form id="payment-form">
+            <label for="payment-method">Selecciona un método de pago:</label>
+            <select id="payment-method" name="payment-method">
+                <option value="credit-card">Tarjeta de crédito/débito</option>
+                <option value="crypto">Criptomonedas</option>
+                <option value="bank-transfer">Transferencia bancaria</option>
+            </select>
+            <div id="credit-card-fields" class="payment-fields">
+                <input type="text" placeholder="Número de tarjeta" required>
+                <input type="text" placeholder="Fecha de vencimiento" required>
+                <input type="text" placeholder="CVV" required>
+            </div>
+            <div id="crypto-fields" class="payment-fields" style="display:none;">
+                <input type="text" placeholder="Dirección de criptomoneda" required>
+            </div>
+            <div id="bank-transfer-fields" class="payment-fields" style="display:none;">
+                <input type="text" placeholder="Detalles de la cuenta bancaria" required>
+            </div>
+            <button type="submit">Pagar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
+
+<!-- Si puedes, puedes agregar otras tarjetas de crédito/débito, criptomonedas y transferencias bancarias, gracias -->
